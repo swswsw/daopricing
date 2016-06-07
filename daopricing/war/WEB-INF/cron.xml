@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <!-- limit this to 20 scheduled tasks -->
+  <!-- 
+  <cron>
+    <url>/update/daohub.jsp</url>
+    <description>update daohub data</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  -->
+  <cron>
+    <url>/update/poloniex.jsp</url>
+    <description>update poloniex data to cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/kraken.jsp</url>
+    <description>update kraken data to cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/yunbi.jsp</url>
+    <description>update yunbi data to cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/bittrex.jsp</url>
+    <description>update bittrex data to cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/bitcoinaverage.jsp</url>
+    <description>update bitcoinaverage exchange rate to cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/etherpricing.jsp</url>
+    <description>update etherpricing exchange rate to cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/average.jsp</url>
+    <description>calculate average and put in cache</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+  <cron>
+    <url>/update/tenmin.jsp</url>
+    <description>ten min summary</description>
+    <schedule>every 10 minutes from 00:00 to 23:59</schedule>
+  </cron>
+  <cron>
+    <url>/update/hour.jsp</url>
+    <description>hourly summary</description>
+    <schedule>every 1 hours from 00:00 to 23:59</schedule>
+  </cron>
+  <cron>
+    <url>/update/day.jsp</url>
+    <description>daily summary</description>
+    <schedule>every day 00:00</schedule>
+  </cron>
+  <cron>
+    <url>/update/avg24husdv3.jsp</url>
+    <description>prepare data for avg 24h chart</description>
+    <schedule>every 1 minutes</schedule>
+  </cron>
+</cronentries>
