@@ -12,6 +12,7 @@ final String poloniex = "Poloniex";
 PriceCache pc = new PriceCache();
 if (json != null) {
 	JSONObject btcdao = json.getJSONObject("BTC_DAO");
+	JSONObject ethdao = json.getJSONObject("ETH_DAO");
 	
 	// weird, currency pair means first currency = this much second currency.  
 	// eg. eth_btc price of 0.0020 means  1 eth = 0.0020 btc
@@ -21,8 +22,11 @@ if (json != null) {
 	// we want quoteVolume as the unit is in eth
 	PriceCache.Price btcdaoPrice = 
 		new PriceCache.Price("DAO", "BTC", btcdao.getDouble("last"), btcdao.getDouble("quoteVolume"), time, poloniex);
+	PriceCache.Price ethdaoPrice = 
+			new PriceCache.Price("DAO", "ETH", ethdao.getDouble("last"), ethdao.getDouble("quoteVolume"), time, poloniex);
 	
 	pc.getPriceList().add(btcdaoPrice);
+	pc.getPriceList().add(ethdaoPrice);
 	
 	CacheManager.save("latest_poloniex", pc);
 }
